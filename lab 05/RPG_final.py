@@ -27,11 +27,7 @@ class Item:
             print(f"Error, {self.name} has not been owned.")
         else:
             print(f"{self.name} has been used.")
-    
-    def view(self):
-        for item in self:
-            if item.rarity == "legendary":
-                print(f"{item.name} is a legendary item.")  #if item is legendary, print it
+
         
     
 class Weapon(Item):
@@ -229,23 +225,35 @@ class Inventory():
     #view items in inventory
 
     def view(self, type = None, item = None):
-        if type == None:
+        if type == None and item == None:
             for item in self.items:
+                if item.rarity == "legendary":
+                    print(f"{item.name} is a legendary item.")  #show off legendary items
                 print(f"{item.name} is in the inventory.")
-        elif item:
+        elif item and type == None:
             if item in self.items:
+                if item.rarity == "legendary":
+                    print(f"{item.name} is a legendary item.")  #show off legendary items
                 print(f"{item.name} is in the inventory.")
             else:
                 print(f"{item.name} is not in the inventory.")
         else:
             for item in self.items:
                 if isinstance(item, Weapon) and item.type == type:
+                    if item.rarity == "legendary":
+                        print(f"{item.name} is a legendary item.")  #show off legendary items
                     print(f"{item.name} is a {type} weapon.")
                 elif isinstance(item, Shield):
+                    if item.rarity == "legendary":
+                        print(f"{item.name} is a legendary item.")  #show off legendary items
                     print(f"{item.name} is a shield.")
                 elif isinstance(item, Clothes):
+                    if item.rarity == "legendary":
+                        print(f"{item.name} is a legendary item.")  #show off legendary items
                     print(f"{item.name} is a clothes.")
                 elif isinstance(item, Potion) and item.type == type:
+                    if item.rarity == "legendary":
+                        print(f"{item.name} is a legendary item.")  #show off legendary items
                     print(f"{item.name} is a {type} potion.")
 
     #drop item from inventory
@@ -290,8 +298,11 @@ broken_pot_lid = Shield(name = "broken pot lid", rarity = "common", defense = 10
 
 hp_potion = Potion(name = "hp potion", type = "HP")
 
+print("\n")
+
 beleg_backpack = Inventory(owner = 'Beleg')
 
+print("\n")
 
 beleg_backpack.add_item(belthronding)
 beleg_backpack.add_item(hp_potion)
@@ -300,16 +311,27 @@ beleg_backpack.add_item(broken_pot_lid)
 beleg_backpack.add_item(muramasa)
 beleg_backpack.add_item(gungnir)
 beleg_backpack.add_item(round_shield)
+
+print("\n")
+
 beleg_backpack.view(type = 'shield')
+print("\n")
 beleg_backpack.view()
+print("\n")
 beleg_backpack.drop_item(broken_pot_lid)
+
+print("\n")
+
 if master_sword in beleg_backpack:
     master_sword.equip()
-    print(master_sword)
+    beleg_backpack.view(item=master_sword)
 # message to show off your legendary item
     master_sword.use()
 # Beleg slash using master sword
 # master sword is used dealing 345 damage
+
+print("\n")
+
 for item in beleg_backpack:
     if isinstance(item, Weapon):
         beleg_backpack.view(item = item)
