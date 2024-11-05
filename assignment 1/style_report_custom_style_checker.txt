@@ -1,0 +1,49 @@
+File: custom_style_checker.py
+Total Lines: 177
+
+Imports:
+  ast
+  re
+  os
+
+Classes:
+  StyleChecker
+
+Functions:
+  None
+
+DocStrings:
+  Class StyleChecker: DocString not found.
+
+  Method StyleChecker.__init__: DocString not found.
+
+  Method StyleChecker.read_file: DocString not found.
+
+  Method StyleChecker.analyze_imports: DocString not found.
+
+  Method StyleChecker.analyze_classes_and_functions: DocString not found.
+
+  Method StyleChecker.extract_docstrings: DocString not found.
+
+  Method StyleChecker.analyze_type_annotations: DocString not found.
+
+  Method StyleChecker.analyze_naming_conventions: DocString not found.
+
+  Method StyleChecker.generate_report: DocString not found.
+
+  Method StyleChecker.run: DocString not found.
+
+
+Type Annotation Issues:
+  StyleChecker.__init__
+  StyleChecker.read_file
+  StyleChecker.analyze_imports
+  StyleChecker.analyze_classes_and_functions
+  StyleChecker.extract_docstrings
+  StyleChecker.analyze_type_annotations
+  StyleChecker.analyze_naming_conventions
+  StyleChecker.generate_report
+  StyleChecker.run
+
+Naming Convention Issues:
+  All names adhere to the naming convention.
