@@ -1,0 +1,73 @@
+File Structure: assignment_2.py
+Total Number of Lines: 168
+
+Imports:
+os
+re
+sys
+ast
+
+
+Classes:
+No classes found.
+
+
+Functions:
+get_python_file_path
+read_file_content
+parse_python_file
+get_total_lines
+get_imports
+get_classes
+get_functions
+extract_docstring
+get_functions_without_annotations
+check_naming_conventions
+generate_report
+main
+
+
+DocStrings:
+Function get_python_file_path:
+Prompt the user for a Python file path and sanitize input.
+
+Function read_file_content:
+Read the content of the given file.
+
+Function parse_python_file:
+Parse the file content into an AST (Abstract Syntax Tree).
+
+Function get_total_lines:
+Get the total number of lines in the file.
+
+Function get_imports:
+Get a list of imported packages.
+
+Function get_classes:
+Get a list of class definitions.
+
+Function get_functions:
+Get a list of functions (excluding methods within classes).
+
+Function extract_docstring:
+Extract the docstring from a node (class, method, or function).
+
+Function get_functions_without_annotations:
+Get a list of functions and methods without type annotations.
+
+Function check_naming_conventions:
+Check naming conventions for classes and functions.
+
+Function generate_report:
+Generate a style report and save it to a file.
+
+Function main:
+Main function to execute the script.
+
+
+Functions/Methods without type annotations:
+get_python_file_path
+extract_docstring
+main
+
+All names adhere to the specified naming conventions.
